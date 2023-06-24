@@ -1,0 +1,33 @@
+{
+  "name": "ngx-filemanager-api-firebase",
+  "version": "0.5.5",
+  "homepage": "https://github.com/benwinding/ngx-filemanager",
+  "email": "hello@benwinding.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "express": "^4.x",
+    "firebase-admin": "^7.x"
+  },
+  "dependencies": {
+    "circular-json": "^0.5.9",
+    "cors": "^2.x",
+    "@google-cloud/storage": "^2.4.3",
+    "@firebase/storage": "^0.2.12",
+    "ngx-filemanager-core": "0.5.x",
+    "express-multipart-file-parser": "^0.1.2",
+    "jsonwebtoken": "8.5.1",
+    "request": "^2.88.0",
+    "verror": "1.10.0",
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/ngx-filemanager-api-firebase.umd.js",
+  "module": "fesm2015/ngx-filemanager-api-firebase.js",
+  "es2015": "fesm2015/ngx-filemanager-api-firebase.js",
+  "esm2015": "esm2015/ngx-filemanager-api-firebase.js",
+  "fesm2015": "fesm2015/ngx-filemanager-api-firebase.js",
+  "typings": "ngx-filemanager-api-firebase.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
+}
