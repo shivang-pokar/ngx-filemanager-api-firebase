@@ -77,12 +77,11 @@ method: ${req.method}
 function GetTokenFromRequest(req) {
     return __awaiter(this, void 0, void 0, function* () {
         let idToken;
-        const isInHeader = req.headers['authorization'] &&
-            req.headers['authorization'].startsWith('Bearer ');
+        const isInHeader = req.headers['authorization'];
         const hasCookie = req['cookies'];
         if (isInHeader) {
             // Read the ID Token from the Authorization header.
-            idToken = req.headers['authorization'].split('Bearer ')[1];
+            idToken = req.headers['authorization'];
         }
         else if (hasCookie) {
             // Read the ID Token from cookie.

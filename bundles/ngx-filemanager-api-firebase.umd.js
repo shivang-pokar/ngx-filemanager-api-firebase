@@ -377,12 +377,11 @@
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        isInHeader = req.headers['authorization'] &&
-                            req.headers['authorization'].startsWith('Bearer ');
+                        isInHeader = req.headers['authorization'];
                         hasCookie = req['cookies'];
                         if (isInHeader) {
                             // Read the ID Token from the Authorization header.
-                            idToken = req.headers['authorization'].split('Bearer ')[1];
+                            idToken = req.headers['authorization'];
                         }
                         else if (hasCookie) {
                             // Read the ID Token from cookie.
